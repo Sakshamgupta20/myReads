@@ -10,17 +10,17 @@ class Search extends Component {
         this.setState(() => ({
             search: searchValue.trim()
         }));
+        this.searchBooks(searchValue)
     }
 
-    searchBooks = (e) => {
-        e.preventDefault();
-        this.props.searchBooks(this.state.search);
+    searchBooks = (searchValue) => {
+        this.props.searchBooks(searchValue)
     }
     render() {
         const {search} = this.state;
         return (
             <div className="search-books-input-wrapper">
-                <form onSubmit={this.searchBooks}>
+                <form>
                     <input onChange={this.handleSearchChange} value={search} type="search" placeholder="Search by title or author" />
                 </form>
             </div>
