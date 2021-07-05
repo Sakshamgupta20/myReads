@@ -41,6 +41,7 @@ body, .app {
 
 .bookshelf-title {
   border-bottom: 1px solid #dedede;
+  text-transform: capitalize;
 }
 
 .bookshelf-books {
@@ -189,10 +190,29 @@ button:active {
 .book-cover {
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   background: #eee;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .book-cover-title {
   padding: 20px 10px 0;
   text-align: center;
   font-size: 0.8em;
+}
+
+.book-shelf-changer-option {
+  font-weight: bold
+}
+
+.loading-container {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-flow: column;
+}
+
+.loading-container p {
+  margin-top: -20px;
+  font-size: 1.5rem;
 }
