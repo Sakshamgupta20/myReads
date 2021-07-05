@@ -8,7 +8,7 @@ class Search extends Component {
     handleSearchChange = (event) => {
         const searchValue = event.target.value;
         this.setState(() => ({
-            search: searchValue.trim()
+            search: searchValue
         }));
         this.searchBooks(searchValue)
     }
